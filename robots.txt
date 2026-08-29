@@ -1,0 +1,9 @@
+# Deployed via GitHub Pages at https://SabyaCodeForge.github.io/Portfolio-/
+# Upload this file as robots.txt at the root of the repo (same folder as
+# index.html) — it will then be reachable at
+# https://SabyaCodeForge.github.io/Portfolio-/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://SabyaCodeForge.github.io/Portfolio-/sitemap.xml

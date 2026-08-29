@@ -1,0 +1,1632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Sabyasachi Mondal — Student Founder &amp; Programmer</title>
+<meta name="description" content="Portfolio of Sabyasachi Mondal — Class 10 ICSE student, programmer, and founder of Sabyx Labs.">
+<meta name="theme-color" content="#f6f5f2">
+<link rel="canonical" href="https://SabyaCodeForge.github.io/Portfolio-/">
+
+<!-- ================= FAVICON ================= -->
+<!-- favicon.svg is the modern, scalable icon (used by most current browsers).
+     The PNG/ICO files are fallbacks for older browsers and OS home-screen icons.
+     Upload all five files (favicon.svg, favicon.ico, favicon-16x16.png,
+     favicon-32x32.png, apple-touch-icon.png) to the same folder as this HTML file. -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<!-- ================= OPEN GRAPH / SOCIAL PREVIEWS ================= -->
+<!-- Controls how the page looks when shared on WhatsApp, LinkedIn, X/Twitter,
+     Facebook, iMessage, Slack, etc. Upload og-image.png next to this HTML file
+     in the repo. URLs below already point to
+     https://SabyaCodeForge.github.io/Portfolio-/ — if you ever rename the repo
+     or move to a custom domain, update the URLs here (and in the structured
+     data and sitemap.xml) to match. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sabyasachi Mondal">
+<meta property="og:title" content="Sabyasachi Mondal — Student Founder & Programmer">
+<meta property="og:description" content="Portfolio of Sabyasachi Mondal — Class 10 ICSE student, programmer, and founder of Sabyx Labs.">
+<meta property="og:url" content="https://SabyaCodeForge.github.io/Portfolio-/">
+<meta property="og:image" content="https://SabyaCodeForge.github.io/Portfolio-/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sabyasachi Mondal — Student Founder & Programmer">
+<meta property="og:locale" content="en_IN">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sabyasachi Mondal — Student Founder & Programmer">
+<meta name="twitter:description" content="Portfolio of Sabyasachi Mondal — Class 10 ICSE student, programmer, and founder of Sabyx Labs.">
+<meta name="twitter:image" content="https://SabyaCodeForge.github.io/Portfolio-/og-image.png">
+<meta name="twitter:site" content="@Sabyasachi49701">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ================= STRUCTURED DATA ================= -->
+<!-- Helps search engines (esp. Google) show a richer result when your name
+     is searched. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sabyasachi Mondal",
+  "url": "https://SabyaCodeForge.github.io/Portfolio-/",
+  "jobTitle": "Student Founder & Programmer",
+  "description": "Class 10 ICSE student, programmer, and founder of Sabyx Labs.",
+  "email": "mailto:s.mondal.leaddev@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "West Bengal",
+    "addressCountry": "IN"
+  },
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "St. Paul's School"
+  },
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Sabyx Labs",
+    "url": "https://SabyaCodeForge.github.io/Portfolio-/"
+  },
+  "sameAs": [
+    "https://github.com/SabyaCodeForge",
+    "https://x.com/Sabyasachi49701"
+  ],
+  "knowsAbout": [
+    "Software Engineering",
+    "Web Development",
+    "Progressive Web Apps",
+    "Robotics",
+    "Electronics",
+    "Product Development",
+    "Artificial Intelligence"
+  ]
+}
+</script>
+
+<!-- ================= ANALYTICS ================= -->
+<!-- Plausible: privacy-friendly, cookie-free, no consent banner needed in
+     most jurisdictions. Sign up free at https://plausible.io (or self-host),
+     then add "SabyaCodeForge.github.io" as the site there (Plausible tracks
+     by domain, not by repo path, so use the bare github.io domain even
+     though the site itself lives at the /Portfolio-/ subpath). Until you
+     sign up, this script simply won't report anywhere and has no effect
+     on the page. -->
+<script defer data-domain="SabyaCodeForge.github.io" src="https://plausible.io/js/script.js"></script>
+
+<style>
+  :root{
+    /* Premium off-white / graphite palette */
+    --bg:#f6f5f2;
+    --bg-2:#efeee9;
+    --panel:#ffffff;
+    --panel-2:#f7f6f2;
+    --ink:#1c1b19;
+    --ink-soft:#5b584f;
+    --ink-faint:#8f8b80;
+    --line: rgba(28,27,25,0.09);
+    --line-strong: rgba(28,27,25,0.16);
+    /* "gold" variable names retained for minimal-risk theming, now mapped to a graphite/silver accent */
+    --gold-dim:#8c887c;
+    --gold:#4a473e;
+    --gold-bright:#141311;
+    --gold-soft: rgba(20,19,17,0.05);
+    --gold-soft-2: rgba(20,19,17,0.12);
+    --gold-line: rgba(20,19,17,0.22);
+    --shadow-tint: 20,19,17;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --serif:'Fraunces', ui-serif, Georgia, serif;
+    --mono:'IBM Plex Mono', ui-monospace, "SF Mono", Menlo, monospace;
+    --maxw:880px;
+    --dot: radial-gradient(circle, rgba(20,19,17,0.10) 1px, transparent 1.3px);
+    --ease: cubic-bezier(.16,.8,.24,1);
+  }
+
+  *{ box-sizing:border-box; }
+  html{ -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.5;
+    -webkit-text-size-adjust:100%;
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--gold-soft-2); color:var(--ink); }
+
+  a{ color:inherit; -webkit-user-drag:none; }
+  ul{ margin:0; padding:0; list-style:none; }
+  p{ margin:0; }
+  img{ -webkit-user-drag:none; user-drag:none; pointer-events:none; }
+
+  /* kept as a harmless no-op so any lingering .selectable references still work */
+  .selectable{ -webkit-user-select:text; user-select:text; }
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+    position:relative;
+  }
+
+  /* ---------- Grain overlay ---------- */
+  .grain{
+    position:fixed; inset:0; z-index:120;
+    pointer-events:none;
+    opacity:0.05;
+    mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- Scroll progress ---------- */
+  #progress{
+    position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg, var(--gold-dim), var(--gold-bright));
+    box-shadow:0 0 12px var(--gold-line);
+    z-index:200;
+    transition:width .08s linear;
+  }
+
+  /* ---------- Cursor glow (desktop only, decorative) ---------- */
+  .glow{
+    /* z-index:-1 (not 0) is required — a fixed/positioned element with
+       z-index:0 paints AFTER normal-flow, non-positioned content, so it
+       would sit visually on top of the page's text. Negative z-index
+       keeps it behind everything while still being fixed to the viewport. */
+    position:fixed; z-index:-1; pointer-events:none;
+    left:0; top:0;
+    width:560px; height:560px; border-radius:50%;
+    background:radial-gradient(circle, rgba(20,19,17,0.06), transparent 70%);
+    /* transform-only positioning (no left/top animation) keeps this on
+       the compositor thread instead of forcing layout every mousemove */
+    transform:translate3d(var(--gx,50vw), var(--gy,20vh), 0) translate(-50%,-50%);
+    will-change:transform;
+    transition:opacity .4s ease, transform .12s linear;
+    opacity:0;
+  }
+  .glow.active{ opacity:1; }
+
+  /* ---------- Animated circuit trace (hero background) ---------- */
+  .circuit{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    z-index:0;
+    pointer-events:none;
+    opacity:0.55;
+    contain:layout paint;
+  }
+  .circuit .trace{
+    stroke-dasharray:5 7;
+    animation:circuit-flow 5.5s linear infinite;
+    will-change:stroke-dashoffset;
+  }
+  .circuit .trace:nth-child(2){ animation-duration:6.8s; animation-direction:reverse; }
+  .circuit .trace:nth-child(3){ animation-duration:7.6s; }
+  .circuit .trace:nth-child(4){ animation-duration:4.2s; animation-direction:reverse; }
+  .circuit .trace:nth-child(5){ animation-duration:5.2s; }
+  @keyframes circuit-flow{ to{ stroke-dashoffset:-120; } }
+  .circuit-nodes circle{ animation:circuit-node-pulse 3.4s ease-in-out infinite; will-change:opacity; }
+  .circuit-nodes circle:nth-child(odd){ animation-delay:.6s; }
+  .circuit-nodes circle:nth-child(3n){ animation-delay:1.3s; }
+  @keyframes circuit-node-pulse{ 0%,100%{ opacity:.32; } 50%{ opacity:1; } }
+  .circuit-pulses circle{
+    filter:drop-shadow(0 0 4px var(--gold-bright)) drop-shadow(0 0 8px rgba(var(--shadow-tint),0.35));
+    opacity:.9;
+    /* promotes each pulse to its own compositor layer so the drop-shadow
+       is rasterized once and simply translated each frame (via animateMotion)
+       instead of being recomputed every frame — this is what removes the stutter */
+    will-change:transform;
+  }
+  @media (max-width: 640px){ .circuit{ opacity:.35; } }
+  @media (prefers-reduced-motion: reduce){
+    .circuit .trace{ animation:none; }
+    .circuit-nodes circle{ animation:none; opacity:.6; }
+    .circuit-pulses{ display:none; }
+  }
+
+  /* ---------- Print button ---------- */
+  .print-btn{
+    position:fixed;
+    top:22px;
+    right:28px;
+    z-index:150;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:linear-gradient(135deg, var(--gold), var(--gold-bright) 55%, var(--ink));
+    color:#f6f5f2;
+    border:none;
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:11px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    padding:11px 18px;
+    border-radius:100px;
+    cursor:pointer;
+    box-shadow:0 8px 24px rgba(var(--shadow-tint),0.18), 0 0 0 1px rgba(255,255,255,0.06) inset;
+    transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+    animation:btn-breathe 4.5s ease-in-out infinite;
+  }
+  @keyframes btn-breathe{
+    0%,100%{ box-shadow:0 8px 24px rgba(var(--shadow-tint),0.18), 0 0 0 1px rgba(255,255,255,0.06) inset; }
+    50%{ box-shadow:0 10px 30px rgba(var(--shadow-tint),0.28), 0 0 0 1px rgba(255,255,255,0.08) inset; }
+  }
+  .print-btn:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 14px 34px rgba(var(--shadow-tint),0.3); animation-play-state:paused; }
+  .print-btn:active{ transform:translateY(0); }
+  .print-btn svg{ width:13px; height:13px; }
+
+  /* ---------- Section dot nav ---------- */
+  .dotnav{
+    position:fixed;
+    right:26px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:140;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .dotnav a{
+    width:8px; height:8px;
+    border-radius:50%;
+    background:var(--line-strong);
+    display:block;
+    position:relative;
+    transition:background .25s ease, transform .25s ease;
+  }
+  .dotnav a::after{
+    content:attr(data-label);
+    position:absolute;
+    right:18px; top:50%;
+    transform:translateY(-50%);
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    background:var(--panel);
+    border:1px solid var(--line);
+    padding:5px 10px;
+    border-radius:6px;
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .2s ease;
+  }
+  .dotnav a:hover::after{ opacity:1; }
+  .dotnav a.active{ background:var(--gold-bright); transform:scale(1.3); box-shadow:0 0 10px var(--gold-line); }
+  @media (max-width: 1180px){ .dotnav{ display:none; } }
+
+  /* ---------- Eyebrow / labels ---------- */
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--gold-bright);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:16px; height:1px;
+    background:linear-gradient(90deg, var(--gold), transparent);
+    display:inline-block;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    padding:120px 0 72px;
+    -webkit-mask-image:linear-gradient(to bottom, black 55%, transparent 100%);
+            mask-image:linear-gradient(to bottom, black 55%, transparent 100%);
+    overflow:hidden;
+  }
+  /* Dot pattern lives on its own layer and drifts via transform (GPU/compositor)
+     instead of animating background-position (which is main-thread paint work
+     on every frame) — this was the main source of the hero jank. */
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:-22px; left:-22px; right:-22px; bottom:-22px;
+    background-image:var(--dot);
+    background-size:22px 22px;
+    z-index:-1;
+    will-change:transform;
+    animation:dot-drift 26s linear infinite;
+  }
+  @keyframes dot-drift{ to{ transform:translate3d(-22px,-22px,0); } }
+  @media (prefers-reduced-motion: reduce){
+    .hero::before{ animation:none; }
+  }
+  .hero-inner{
+    position:relative;
+    z-index:1;
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  .seal{
+    width:52px; height:52px;
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:16px;
+    letter-spacing:0.02em;
+    color:#f6f5f2;
+    margin-bottom:26px;
+    background:linear-gradient(120deg, var(--gold) 0%, var(--gold-bright) 45%, var(--ink) 60%, var(--gold) 100%);
+    background-size:260% 100%;
+    animation:seal-intro .8s var(--ease) forwards, shimmer 6s linear .8s infinite, seal-float 5s ease-in-out .8s infinite;
+    box-shadow:0 6px 22px rgba(var(--shadow-tint),0.22);
+    opacity:0;
+  }
+  @keyframes shimmer{ 0%{ background-position:0% 0; } 100%{ background-position:-260% 0; } }
+  @keyframes seal-float{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-4px); } }
+  @keyframes seal-intro{ from{ opacity:0; transform:translateY(10px) scale(.9); } to{ opacity:1; transform:translateY(0) scale(1); } }
+
+  .hero .kicker{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:26px;
+    opacity:0;
+    animation:hero-fade-up .8s var(--ease) .1s forwards;
+  }
+  .hero .kicker b{ color:var(--gold-bright); font-weight:600; }
+  @keyframes hero-fade-up{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:translateY(0); } }
+
+  h1.name{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(42px, 9vw, 92px);
+    letter-spacing:-0.02em;
+    line-height:0.96;
+    margin:0 0 22px;
+    color:var(--ink);
+    overflow:hidden;
+  }
+  h1.name .line{ display:block; overflow:hidden; }
+  h1.name .letter{
+    display:inline-block;
+    opacity:0;
+    transform:translateY(60px) rotate(4deg);
+    animation:rise .9s var(--ease) forwards;
+  }
+  @keyframes rise{ to{ opacity:1; transform:translateY(0) rotate(0); } }
+
+  .role-line{
+    font-family:var(--mono);
+    font-size:clamp(12.5px, 1.8vw, 15px);
+    letter-spacing:0.02em;
+    color:var(--ink-soft);
+    margin-bottom:34px;
+    opacity:0;
+    animation:hero-fade-up .8s var(--ease) .95s forwards;
+  }
+  .role-line span{ color:var(--gold-dim); margin:0 10px; }
+
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 22px;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-soft);
+    padding-top:28px;
+    border-top:1px solid var(--line);
+    opacity:0;
+    animation:hero-fade-up .8s var(--ease) 1.1s forwards;
+  }
+  .contact-row a{
+    position:relative;
+    text-decoration:none;
+    color:var(--ink-soft);
+    transition:color .2s ease;
+  }
+  .contact-row a::after{
+    content:"";
+    position:absolute; left:0; right:100%; bottom:-2px;
+    height:1px;
+    background:var(--gold);
+    transition:right .3s var(--ease);
+  }
+  .contact-row a:hover{ color:var(--gold-bright); }
+  .contact-row a:hover::after{ right:0; }
+  .contact-row .sep{ color:var(--line-strong); }
+
+  /* ---------- Section shell ---------- */
+  section.block{
+    position:relative;
+    padding:60px 0;
+    border-top:1px solid var(--line);
+  }
+  section.block .wrap > .eyebrow{ margin-bottom:22px; }
+
+  h2.h-title{
+    font-family:var(--serif);
+    font-size:clamp(24px, 3vw, 30px);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0 0 22px;
+  }
+
+  .lede{
+    font-size:16.5px;
+    line-height:1.75;
+    color:var(--ink-soft);
+    max-width:640px;
+  }
+  .lede + .lede{ margin-top:14px; }
+
+  .statement{
+    margin-top:24px;
+    padding-left:18px;
+    border-left:2px solid var(--gold-soft-2);
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    color:var(--ink);
+    font-size:17px;
+    max-width:600px;
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(26px);
+    filter:blur(4px);
+    transition:opacity .8s var(--ease), transform .8s var(--ease), filter .8s var(--ease);
+  }
+  .reveal.in-view{ opacity:1; transform:translateY(0); filter:blur(0); }
+  .reveal-stag > *{
+    opacity:0; transform:translateY(18px);
+    filter:blur(3px);
+    transition:opacity .6s var(--ease), transform .6s var(--ease), filter .6s var(--ease);
+  }
+  .reveal-stag.in-view > *{ opacity:1; transform:translateY(0); filter:blur(0); }
+  .reveal-stag.in-view > *:nth-child(1){ transition-delay:.03s; }
+  .reveal-stag.in-view > *:nth-child(2){ transition-delay:.09s; }
+  .reveal-stag.in-view > *:nth-child(3){ transition-delay:.15s; }
+  .reveal-stag.in-view > *:nth-child(4){ transition-delay:.21s; }
+  .reveal-stag.in-view > *:nth-child(5){ transition-delay:.27s; }
+  .reveal-stag.in-view > *:nth-child(6){ transition-delay:.33s; }
+  .reveal-stag.in-view > *:nth-child(7){ transition-delay:.39s; }
+  .reveal-stag.in-view > *:nth-child(8){ transition-delay:.45s; }
+
+  /* ---------- Two column label/content grid ---------- */
+  .row{
+    display:grid;
+    grid-template-columns:170px 1fr;
+    gap:28px;
+    padding:28px 0;
+  }
+  .row:not(:last-child){ border-bottom:1px solid var(--line); }
+  .row .label{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    padding-top:2px;
+  }
+
+  /* ---------- Sabyx Labs feature card ---------- */
+  .labs-card{
+    position:relative;
+    background:var(--panel);
+    border:1px solid var(--line-strong);
+    border-radius:18px;
+    padding:40px 36px;
+    overflow:hidden;
+    background-image:var(--dot);
+    background-size:20px 20px;
+    background-position:top right;
+    transition:border-color .35s var(--ease), box-shadow .35s var(--ease), transform .35s var(--ease);
+  }
+  .labs-card:hover{ border-color:var(--gold-line); box-shadow:0 24px 60px -20px rgba(var(--shadow-tint),0.22); transform:translateY(-3px); }
+  .labs-card::before{
+    content:"";
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:3px;
+    background:linear-gradient(180deg, var(--gold-bright), var(--gold-dim));
+  }
+  .labs-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-bottom:24px;
+  }
+  .status-pill{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold-bright);
+    background:var(--gold-soft);
+    border:1px solid var(--gold-soft-2);
+    padding:6px 12px;
+    border-radius:100px;
+  }
+  .status-dot{
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--gold-bright);
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.3;} }
+  .labs-date{ font-family:var(--mono); font-size:11.5px; color:var(--ink-faint); letter-spacing:.04em; }
+
+  .labs-title{
+    font-family:var(--serif);
+    font-size:clamp(26px,3.6vw,34px);
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0 0 6px;
+  }
+  .labs-role{
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-bottom:22px;
+  }
+  .labs-desc{ color:var(--ink-soft); font-size:15.5px; line-height:1.7; max-width:580px; margin-bottom:28px; }
+
+  .labs-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:11px 28px;
+  }
+  .labs-list li{
+    position:relative;
+    padding-left:18px;
+    font-size:14.5px;
+    color:var(--ink);
+    line-height:1.55;
+  }
+  .labs-list li::before{
+    content:"";
+    position:absolute;
+    left:0; top:9px;
+    width:7px; height:1.5px;
+    background:var(--gold);
+  }
+
+  /* ---------- Project cards ---------- */
+  .proj-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:18px;
+  }
+  .proj-card{
+    position:relative;
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:28px 26px;
+    background:var(--panel);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    overflow:hidden;
+    transform-style:preserve-3d;
+    will-change:transform;
+    transition:transform .5s var(--ease), border-color .35s ease, box-shadow .35s ease;
+  }
+  .proj-card.tilting{ transition:transform .08s ease-out, border-color .35s ease, box-shadow .35s ease; }
+  .proj-card::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(125deg, transparent 40%, rgba(20,19,17,0.05) 50%, transparent 60%);
+    background-size:220% 220%;
+    background-position:120% 0;
+    opacity:0;
+    transition:opacity .4s ease, background-position .8s ease;
+    pointer-events:none;
+  }
+  /* Glare that tracks the pointer for the 3D tilt effect */
+  .proj-card::before{
+    content:"";
+    position:absolute; inset:0;
+    border-radius:inherit;
+    background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,0.45), transparent 62%);
+    opacity:0;
+    transition:opacity .35s ease;
+    pointer-events:none;
+    mix-blend-mode:overlay;
+  }
+  .proj-card:hover{ transform:translateY(-6px) scale(1.008); border-color:var(--gold-line); box-shadow:0 26px 50px -22px rgba(var(--shadow-tint),0.28); }
+  .proj-card:hover::after{ opacity:1; background-position:0% 0; }
+  .proj-card:hover::before{ opacity:1; }
+  @media (prefers-reduced-motion: reduce){
+    .proj-card{ transform-style:flat; }
+  }
+  /* grid-column:span 2 is only safe to apply once two 280px tracks
+     genuinely fit — otherwise repeat(auto-fit,...) reserves the extra
+     track regardless of available width and the grid overflows
+     horizontally, which used to get silently clipped by overflow-x:hidden. */
+  @media (min-width: 680px){
+    .proj-card--wide{ grid-column: span 2; }
+  }
+  .proj-head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .proj-cat{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .badge{
+    font-family:var(--mono);
+    font-size:10px;
+    letter-spacing:0.07em;
+    text-transform:uppercase;
+    color:var(--gold-bright);
+    background:var(--gold-soft);
+    border:1px solid var(--gold-soft-2);
+    padding:3px 9px;
+    border-radius:100px;
+    white-space:nowrap;
+  }
+  .proj-title{ font-family:var(--serif); font-size:19px; font-weight:600; letter-spacing:-0.005em; }
+  .proj-desc{ font-size:14px; color:var(--ink-soft); line-height:1.65; }
+  .proj-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:auto;
+    padding-top:10px;
+  }
+  .tag{
+    font-family:var(--mono);
+    font-size:11px;
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+    padding:4px 9px;
+    border-radius:6px;
+  }
+  .proj-focus{
+    font-size:13px;
+    color:var(--ink-faint);
+    padding-top:10px;
+    border-top:1px solid var(--line);
+  }
+  .proj-focus b{ color:var(--gold-bright); font-weight:600; }
+
+  /* ---------- Skills ---------- */
+  .skill-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(160px, 1fr));
+    gap:26px;
+  }
+  .skill-col h3{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--gold-bright);
+    margin:0 0 14px;
+    font-weight:500;
+  }
+  .skill-col ul li{
+    font-size:14.5px;
+    padding:8px 0;
+    border-bottom:1px solid var(--line);
+    transition:padding-left .25s ease, color .25s ease;
+  }
+  .skill-col ul li:hover{ padding-left:6px; color:var(--gold-bright); }
+  .skill-col ul li:last-child{ border-bottom:none; }
+
+  .exploring{
+    margin-top:36px;
+    padding-top:28px;
+    border-top:1px solid var(--line);
+  }
+  .exploring .eyebrow{ margin-bottom:14px; }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:8px; }
+  .chip{
+    font-family:var(--mono);
+    font-size:12px;
+    color:var(--ink-soft);
+    background:var(--bg-2);
+    border:1px solid var(--line);
+    padding:6px 12px;
+    border-radius:100px;
+    transition:border-color .25s var(--ease), color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .chip:hover{ border-color:var(--gold-line); color:var(--gold-bright); transform:translateY(-2px); box-shadow:0 8px 18px -10px rgba(var(--shadow-tint),0.25); }
+
+  /* ---------- Interactive Demo ---------- */
+  .demo-panel{
+    background:var(--panel);
+    border:1px solid var(--line-strong);
+    border-radius:18px;
+    padding:28px 30px 30px;
+    background-image:var(--dot);
+    background-size:20px 20px;
+    background-position:top right;
+  }
+  .demo-head{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:18px;
+  }
+  .demo-name{ font-family:var(--mono); font-size:12.5px; letter-spacing:.04em; color:var(--ink); }
+  .demo-name-sub{ color:var(--ink-faint); font-weight:400; }
+  .demo-status{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    font-family:var(--mono);
+    font-size:11px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+  }
+  .demo-status-dot{
+    width:6px; height:6px;
+    border-radius:50%;
+    background:var(--ink-faint);
+    transition:background .2s ease;
+  }
+  .demo-status.is-active .demo-status-dot{
+    background:var(--gold-bright);
+    animation:pulse 1s ease-in-out infinite;
+  }
+  .demo-status.is-active{ color:var(--gold-bright); }
+  .demo-chart{
+    display:block;
+    width:100%;
+    height:140px;
+    border-radius:10px;
+    background:var(--panel-2);
+    border:1px solid var(--line);
+  }
+  .demo-grid{ stroke:var(--line); stroke-width:1; }
+  .demo-line{
+    fill:none;
+    stroke:var(--gold-bright);
+    stroke-width:2;
+    stroke-linejoin:round;
+    stroke-linecap:round;
+  }
+  .demo-controls{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+    flex-wrap:wrap;
+  }
+  .demo-btn{
+    font-family:var(--mono);
+    font-size:11.5px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    padding:9px 16px;
+    border-radius:100px;
+    border:1px solid var(--line-strong);
+    background:transparent;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:border-color .2s ease, color .2s ease, transform .2s var(--ease), background .2s ease;
+  }
+  .demo-btn:hover{ border-color:var(--gold-line); color:var(--ink); transform:translateY(-1px); }
+  .demo-btn--accent{
+    background:var(--gold-bright);
+    border-color:var(--gold-bright);
+    color:#f6f5f2;
+  }
+  .demo-btn--accent:hover{ color:#f6f5f2; opacity:.9; }
+  .demo-btn--accent:active{ transform:translateY(0) scale(.97); }
+  .demo-note{
+    font-size:12px;
+    color:var(--ink-faint);
+    margin-top:14px;
+  }
+
+  /* ---------- Entrepreneurship ---------- */
+  .flow{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:12px;
+    font-family:var(--mono);
+    font-size:13px;
+    color:var(--ink);
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:20px 22px;
+    margin:26px 0 34px;
+  }
+  .flow .step{ white-space:nowrap; }
+  .flow .arrow{ color:var(--gold); }
+
+  .strength-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+    gap:24px 32px;
+  }
+  .strength{ padding-bottom:4px; }
+  .strength h4{
+    margin:0 0 6px;
+    font-family:var(--serif);
+    font-size:15.5px;
+    font-weight:600;
+    color:var(--gold-bright);
+  }
+  .strength p{
+    font-size:13.5px;
+    color:var(--ink-soft);
+    line-height:1.6;
+  }
+
+  /* ---------- Education ---------- */
+  .edu-card{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:16px;
+    padding:24px 26px;
+    margin-bottom:24px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+  }
+  .edu-school{ font-family:var(--serif); font-size:20px; font-weight:600; letter-spacing:-0.005em; }
+  .edu-meta{ font-family:var(--mono); font-size:12.5px; color:var(--ink-soft); margin-top:5px; }
+  .edu-session{ font-family:var(--mono); font-size:12px; color:var(--gold-bright); text-align:right; }
+
+  /* ---------- Interests chips ---------- */
+  .interest-row{ display:flex; flex-wrap:wrap; gap:9px; }
+  .interest-row .chip{ font-size:12.5px; }
+
+  /* ---------- Links / contact ---------- */
+  .link-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:16px 32px;
+  }
+  .link-item{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .link-item .label{
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+  }
+  .link-item .value{ font-size:15.5px; font-weight:600; }
+  .link-item a.value{ text-decoration:none; display:inline-block; transition:color .2s ease, transform .2s var(--ease); }
+  .link-item a.value:hover{ color:var(--gold-bright); transform:translateX(4px); }
+  .link-item .sub{ font-family:var(--mono); font-size:12px; color:var(--ink-faint); }
+
+  .lang-line{
+    margin-top:28px;
+    display:flex;
+    gap:10px;
+    align-items:baseline;
+    font-family:var(--mono);
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .lang-line .label{ text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); font-size:11px;}
+
+  footer{
+    padding:50px 0 64px;
+    text-align:center;
+    position:relative;
+  }
+  footer p{
+    font-family:var(--mono);
+    font-size:11.5px;
+    color:var(--ink-faint);
+    max-width:520px;
+    margin:0 auto 12px;
+    line-height:1.75;
+  }
+  footer .copy{ font-size:11px; color:var(--ink-faint); }
+  footer .copy b{ color:var(--gold-dim); }
+
+  /* ---------- Focus visibility ---------- */
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold-bright);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  /* ---------- Responsive ---------- */
+  /* Grids (.proj-grid, .skill-grid, .strength-grid, .link-grid, .labs-list) use
+     auto-fit/minmax above, so they reflow to the actual available width on their
+     own — no viewport-width media query needed for column count. The one
+     exception is .proj-card--wide's grid-column:span 2, which is gated behind
+     a min-width query below (see .proj-card--wide) since explicit spans force
+     auto-fit to reserve that many tracks regardless of available width. */
+  @media (max-width: 760px){
+    .row{ grid-template-columns:1fr; gap:8px; }
+    .hero{ padding:100px 0 52px; }
+    .edu-card{ flex-direction:column; }
+    .edu-session{ text-align:left; }
+    .labs-card{ padding:30px 24px; }
+    .print-btn{ top:16px; right:16px; }
+  }
+  @media (max-width: 560px){
+    .wrap{ padding:0 20px; }
+    .hero-inner{ padding:0 20px; }
+  }
+  @media (max-width: 400px){
+    .print-btn span{ display:none; }
+    .print-btn{ padding:12px; }
+    section.block{ padding:46px 0; }
+    .labs-card{ padding:24px 18px; }
+    .proj-card{ padding:22px 18px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+    h1.name .letter{ opacity:1; transform:none; }
+    .reveal, .reveal-stag > *{ opacity:1; transform:none; filter:none; }
+    .seal, .hero .kicker, .role-line, .contact-row{ opacity:1; }
+  }
+
+  /* ---------- Print ---------- */
+  @media print{
+    @page{ size:A4; margin:14mm 16mm; }
+    .print-btn, .dotnav, #progress, .grain, .glow, #demo, .circuit{ display:none !important; }
+    *{ -webkit-user-select:text !important; user-select:text !important; }
+    body{ background:#fff; color:#000; overflow:visible; }
+    .hero{ -webkit-mask-image:none; mask-image:none; padding:0 0 28px; background:none; }
+    .hero::before{ display:none; }
+    .seal{ background:#000; color:#fff; animation:none; box-shadow:none; }
+    section.block{ padding:22px 0; break-inside:avoid; border-color:#ddd; }
+    .labs-card, .proj-card, .flow, .edu-card{ break-inside:avoid; box-shadow:none; border-color:#ddd; }
+    .labs-card{ background:#fff; }
+    .proj-card{ background:#fff; }
+    .proj-card::after{ display:none; }
+    a{ text-decoration:none; color:#000; }
+    .status-dot{ animation:none; }
+    h1.name{ font-size:44px; font-family:var(--serif); }
+    h1.name .letter{ opacity:1 !important; transform:none !important; }
+    .wrap, .hero-inner{ padding:0; max-width:100%; }
+    footer{ padding:24px 0 0; }
+    .reveal, .reveal-stag > *{ opacity:1 !important; transform:none !important; }
+    .eyebrow, .badge, .status-pill, .kicker b, .role-line span, .labs-title, .proj-title, h4, h3, .edu-session{ color:#000 !important; -webkit-text-fill-color:#000 !important; }
+    .lede, .labs-desc, .proj-desc, .ink-soft{ color:#333 !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="glow" id="glow" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+
+<nav class="dotnav" id="dotnav" aria-label="Section navigation">
+  <a href="#profile" data-label="Profile"></a>
+  <a href="#experience" data-label="Experience"></a>
+  <a href="#projects" data-label="Projects"></a>
+  <a href="#skills" data-label="Skills"></a>
+  <a href="#demo" data-label="Demo"></a>
+  <a href="#entrepreneurship" data-label="Entrepreneurship"></a>
+  <a href="#education" data-label="Education"></a>
+  <a href="#interests" data-label="Interests"></a>
+  <a href="#contact" data-label="Contact"></a>
+</nav>
+
+<button class="print-btn" onclick="window.print()" aria-label="Print or save as PDF">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+  <span>Save as PDF</span>
+</button>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <svg class="circuit" viewBox="0 0 1200 480" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="circuitFade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="var(--gold)" stop-opacity="0.6"/>
+        <stop offset="1" stop-color="var(--gold)" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <g class="circuit-paths" fill="none" stroke="url(#circuitFade)" stroke-width="1.4" stroke-linecap="round">
+      <path class="trace" d="M -20 60 H 220 V 140 H 460 V 40 H 760 V 180 H 1040 V 90 H 1220"/>
+      <path class="trace" d="M -20 220 H 160 V 300 H 380 V 220 H 640 V 340 H 900 V 260 H 1220"/>
+      <path class="trace" d="M -20 400 H 300 V 340 H 560 V 420 H 820 V 360 H 1080 V 400 H 1220"/>
+      <path class="trace" d="M 120 -20 V 120 H 340"/>
+      <path class="trace" d="M 980 -20 V 100 H 760"/>
+    </g>
+    <g class="circuit-nodes" fill="var(--gold-bright)">
+      <circle cx="220" cy="60" r="3"/><circle cx="460" cy="140" r="3"/><circle cx="760" cy="40" r="3"/>
+      <circle cx="1040" cy="180" r="3"/><circle cx="160" cy="220" r="3"/><circle cx="380" cy="300" r="3"/>
+      <circle cx="640" cy="220" r="3"/><circle cx="900" cy="340" r="3"/><circle cx="300" cy="400" r="3"/>
+      <circle cx="560" cy="340" r="3"/><circle cx="820" cy="420" r="3"/><circle cx="1080" cy="360" r="3"/>
+    </g>
+    <g class="circuit-pulses" fill="#fff">
+      <circle r="3.2"><animateMotion dur="6s" repeatCount="indefinite" path="M -20 60 H 220 V 140 H 460 V 40 H 760 V 180 H 1040 V 90 H 1220"/></circle>
+      <circle r="3.2"><animateMotion dur="7.5s" begin="1.2s" repeatCount="indefinite" path="M -20 220 H 160 V 300 H 380 V 220 H 640 V 340 H 900 V 260 H 1220"/></circle>
+      <circle r="3.2"><animateMotion dur="8.5s" begin="2.4s" repeatCount="indefinite" path="M -20 400 H 300 V 340 H 560 V 420 H 820 V 360 H 1080 V 400 H 1220"/></circle>
+      <circle r="2.6"><animateMotion dur="4s" begin=".6s" repeatCount="indefinite" path="M 120 -20 V 120 H 340"/></circle>
+      <circle r="2.6"><animateMotion dur="4.6s" begin="1.8s" repeatCount="indefinite" path="M 980 -20 V 100 H 760"/></circle>
+    </g>
+  </svg>
+  <div class="hero-inner">
+    <div class="seal" aria-hidden="true">SM</div>
+    <p class="kicker">Portfolio Résumé · <b>West Bengal, India</b></p>
+    <h1 class="name" id="heroName">
+      <span class="line">SABYASACHI</span>
+      <span class="line">MONDAL</span>
+    </h1>
+    <p class="role-line">Student Founder <span>·</span> Technology Enthusiast <span>·</span> Programmer <span>·</span> Builder</p>
+    <div class="contact-row">
+      <span class="selectable">+91 93826 05574</span>
+      <span class="sep">/</span>
+      <a class="selectable" href="mailto:s.mondal.leaddev@gmail.com">s.mondal.leaddev@gmail.com</a>
+      <span class="sep">/</span>
+      <a class="selectable" href="https://github.com/SabyaCodeForge" target="_blank" rel="noopener">github.com/SabyaCodeForge</a>
+      <span class="sep">/</span>
+      <a class="selectable" href="https://x.com/Sabyasachi49701" target="_blank" rel="noopener">x.com/Sabyasachi49701</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= PROFILE ================= -->
+  <section class="block" id="profile">
+    <div class="wrap reveal">
+      <p class="eyebrow">Profile</p>
+      <p class="lede">Class 10 ICSE student, programmer, and founder of Sabyx Labs, with a strong interest in software development, web technologies, robotics, electronics, and entrepreneurship.</p>
+      <p class="lede">Focused on transforming ideas into practical digital products — ranging from responsive web applications and Progressive Web Apps to Arduino-based electronics and early-stage product concepts.</p>
+      <p class="lede">Particularly interested in software engineering, product development, artificial intelligence, robotics, and building technology that is simple and useful for everyday people.</p>
+      <p class="statement">"I believe the best way to understand technology is to build with it."</p>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE — SABYX LABS ================= -->
+  <section class="block" id="experience">
+    <div class="wrap">
+      <p class="eyebrow reveal">Experience</p>
+      <div class="labs-card reveal">
+        <div class="labs-top">
+          <span class="status-pill"><span class="status-dot"></span>Active</span>
+          <span class="labs-date">2026 — Present</span>
+        </div>
+        <h2 class="labs-title">Sabyx Labs</h2>
+        <p class="labs-role">Founder &amp; Lead Developer</p>
+        <p class="labs-desc">A student-led technology initiative focused on exploring and building practical digital products and technology solutions — from concept through prototype.</p>
+        <ul class="labs-list">
+          <li>Conceptualize and develop software product ideas based on real-world problems</li>
+          <li>Design responsive web applications and Progressive Web Apps</li>
+          <li>Experiment with modern web technologies and AI-assisted development</li>
+          <li>Develop product concepts for students, schools, small businesses, and everyday users</li>
+          <li>Work across ideation, interface design, development, testing, and iteration</li>
+          <li>Focus on simple, accessible, and visually polished digital experiences</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SELECTED PROJECTS ================= -->
+  <section class="block" id="projects">
+    <div class="wrap">
+      <p class="eyebrow reveal">Selected Projects</p>
+      <div class="proj-grid reveal-stag">
+
+        <article class="proj-card">
+          <div class="proj-head">
+            <span class="proj-cat">Web Application · School Technology</span>
+            <span class="badge">Prototype</span>
+          </div>
+          <h3 class="proj-title">School Registration &amp; PDF Generation System</h3>
+          <p class="proj-desc">A digital registration solution intended to simplify student data collection and reduce manual administrative work.</p>
+          <div class="proj-tags">
+            <span class="tag">Digital registration</span>
+            <span class="tag">PDF generation</span>
+            <span class="tag">Print-ready output</span>
+            <span class="tag">Responsive</span>
+            <span class="tag">PWA</span>
+            <span class="tag">School branding</span>
+          </div>
+          <p class="proj-focus"><b>Focus —</b> replacing repetitive manual processes with a simple digital workflow.</p>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-head">
+            <span class="proj-cat">Business Productivity · Web Application</span>
+            <span class="badge">Concept</span>
+          </div>
+          <h3 class="proj-title">Sabyx CRM</h3>
+          <p class="proj-desc">A lightweight CRM platform for small businesses and independent users to organize day-to-day operations.</p>
+          <div class="proj-tags">
+            <span class="tag">Client management</span>
+            <span class="tag">Invoicing</span>
+            <span class="tag">Task tracking</span>
+            <span class="tag">Basic analytics</span>
+            <span class="tag">Responsive</span>
+          </div>
+          <p class="proj-focus"><b>Focus —</b> a simple alternative to unnecessarily complicated business software.</p>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-head">
+            <span class="proj-cat">File Sharing · Web Concept</span>
+            <span class="badge">Concept</span>
+          </div>
+          <h3 class="proj-title">Sabyx Drop</h3>
+          <p class="proj-desc">A lightweight file-sharing product concept focused on making file transfer straightforward and accessible.</p>
+          <div class="proj-tags">
+            <span class="tag">Simple UX</span>
+            <span class="tag">Minimal interface</span>
+            <span class="tag">Fast interaction</span>
+            <span class="tag">Responsive</span>
+          </div>
+          <p class="proj-focus"><b>Focus —</b> accessible, friction-free file sharing.</p>
+        </article>
+
+        <article class="proj-card">
+          <div class="proj-head">
+            <span class="proj-cat">Beta Testing · Product Feedback</span>
+            <span class="badge">Concept</span>
+          </div>
+          <h3 class="proj-title">BetaView</h3>
+          <p class="proj-desc">A micro-beta-testing initiative providing developers with practical feedback from a student/user perspective.</p>
+          <div class="proj-tags">
+            <span class="tag">Test</span>
+            <span class="tag">Identify issues</span>
+            <span class="tag">Structured feedback</span>
+            <span class="tag">Iterate</span>
+          </div>
+          <p class="proj-focus"><b>Focus —</b> real-world usability testing and user-centered improvement.</p>
+        </article>
+
+        <article class="proj-card proj-card--wide">
+          <div class="proj-head">
+            <span class="proj-cat">Arduino UNO · Embedded Systems</span>
+            <span class="badge">Ongoing</span>
+          </div>
+          <h3 class="proj-title">Arduino Robotics &amp; Electronics Projects</h3>
+          <p class="proj-desc">Hands-on experiments with sensors, motors, displays, detection systems, and basic automation — building practical understanding of electronics, hardware integration, and prototyping.</p>
+          <div class="proj-tags">
+            <span class="tag">Arduino UNO</span>
+            <span class="tag">Sensors</span>
+            <span class="tag">Motors</span>
+            <span class="tag">Electromagnets</span>
+            <span class="tag">Infrared detection</span>
+            <span class="tag">Motion detection</span>
+            <span class="tag">Automation</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TECHNICAL SKILLS ================= -->
+  <section class="block" id="skills">
+    <div class="wrap">
+      <p class="eyebrow reveal">Technical Skills</p>
+      <div class="skill-grid reveal-stag">
+        <div class="skill-col">
+          <h3>Programming</h3>
+          <ul><li>Java</li><li>Python</li><li>QBasic</li></ul>
+        </div>
+        <div class="skill-col">
+          <h3>Web Development</h3>
+          <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Responsive Design</li><li>Progressive Web Apps</li></ul>
+        </div>
+        <div class="skill-col">
+          <h3>Hardware &amp; Electronics</h3>
+          <ul><li>Arduino UNO</li><li>Sensors</li><li>Motors</li><li>Embedded systems</li><li>Prototyping</li></ul>
+        </div>
+        <div class="skill-col">
+          <h3>Development &amp; Tools</h3>
+          <ul><li>GitHub</li><li>AI-assisted development</li><li>UI/UX prototyping</li><li>Product prototyping</li></ul>
+        </div>
+      </div>
+      <div class="exploring reveal">
+        <p class="eyebrow">Currently Exploring</p>
+        <div class="chip-row">
+          <span class="chip">Advanced JavaScript</span>
+          <span class="chip">Full-stack development</span>
+          <span class="chip">Artificial intelligence</span>
+          <span class="chip">AI-assisted development</span>
+          <span class="chip">Modern UI/UX</span>
+          <span class="chip">Software architecture</span>
+          <span class="chip">Product development</span>
+          <span class="chip">Entrepreneurship</span>
+          <span class="chip">Robotics &amp; embedded systems</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE DEMO ================= -->
+  <section class="block" id="demo">
+    <div class="wrap">
+      <p class="eyebrow reveal">Interactive Demo</p>
+      <p class="lede reveal">A small simulated sensor readout, in the spirit of the Arduino motion &amp; infrared detection work below — press the button to fire a simulated detection event.</p>
+      <div class="demo-panel reveal">
+        <div class="demo-head">
+          <span class="demo-name">Sabyx Sensor Monitor <span class="demo-name-sub">— simulated</span></span>
+          <span class="demo-status" id="demoStatus"><span class="demo-status-dot"></span>Idle</span>
+        </div>
+        <svg class="demo-chart" id="demoChart" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="0" y1="35" x2="600" y2="35" class="demo-grid"></line>
+          <line x1="0" y1="70" x2="600" y2="70" class="demo-grid"></line>
+          <line x1="0" y1="105" x2="600" y2="105" class="demo-grid"></line>
+          <polyline id="demoLine" class="demo-line" points=""></polyline>
+        </svg>
+        <div class="demo-controls">
+          <button class="demo-btn" id="demoToggle" type="button">Pause</button>
+          <button class="demo-btn demo-btn--accent" id="demoTrigger" type="button">Trigger Detection</button>
+        </div>
+        <p class="demo-note">Log output is generated in your browser for illustration only — no real sensor is connected.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ENTREPRENEURSHIP ================= -->
+  <section class="block" id="entrepreneurship">
+    <div class="wrap">
+      <p class="eyebrow reveal">Entrepreneurship &amp; Product Development</p>
+      <p class="lede reveal">Sabyx Labs represents an interest in going beyond learning technology and actually building with it — understanding not only how software works technically, but how a product should work for the person using it.</p>
+      <div class="flow reveal">
+        <span class="step">Identify a problem</span><span class="arrow">→</span>
+        <span class="step">Design a solution</span><span class="arrow">→</span>
+        <span class="step">Build a prototype</span><span class="arrow">→</span>
+        <span class="step">Test it</span><span class="arrow">→</span>
+        <span class="step">Improve it</span>
+      </div>
+      <p class="eyebrow reveal">Core Strengths</p>
+      <div class="strength-grid reveal-stag">
+        <div class="strength">
+          <h4>Problem Solving</h4>
+          <p>Breaking complex ideas into smaller, understandable problems and developing practical solutions.</p>
+        </div>
+        <div class="strength">
+          <h4>Self-Directed Learning</h4>
+          <p>Regularly exploring programming, web development, electronics, and new technologies independently.</p>
+        </div>
+        <div class="strength">
+          <h4>Product Thinking</h4>
+          <p>Understanding the user problem behind a product rather than focusing on the technology alone.</p>
+        </div>
+        <div class="strength">
+          <h4>Creative Thinking</h4>
+          <p>Experimenting with unconventional ideas and turning concepts into prototypes.</p>
+        </div>
+        <div class="strength">
+          <h4>Builder Mindset</h4>
+          <p>Learning by creating real projects and experimenting with technology.</p>
+        </div>
+        <div class="strength">
+          <h4>Adaptability</h4>
+          <p>Comfortable learning unfamiliar technologies when a project requires it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="block" id="education">
+    <div class="wrap">
+      <p class="eyebrow reveal">Education</p>
+      <div class="edu-card reveal">
+        <div>
+          <div class="edu-school">St. Paul's School</div>
+          <div class="edu-meta">ICSE — Class X · Indian Certificate of Secondary Education</div>
+        </div>
+        <div class="edu-session">Session<br>2026–27</div>
+      </div>
+      <p class="eyebrow reveal" style="margin-bottom:14px;">Academic Interests</p>
+      <div class="interest-row reveal-stag">
+        <span class="chip">Computer Applications</span>
+        <span class="chip">Mathematics</span>
+        <span class="chip">Physics</span>
+        <span class="chip">Chemistry</span>
+        <span class="chip">Biology</span>
+        <span class="chip">Technology &amp; Engineering</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INTERESTS ================= -->
+  <section class="block" id="interests">
+    <div class="wrap">
+      <p class="eyebrow reveal">Areas of Interest</p>
+      <div class="interest-row reveal-stag">
+        <span class="chip">Software Engineering</span>
+        <span class="chip">Web Development</span>
+        <span class="chip">Artificial Intelligence</span>
+        <span class="chip">Robotics</span>
+        <span class="chip">Electronics</span>
+        <span class="chip">Product Development</span>
+        <span class="chip">UI/UX Design</span>
+        <span class="chip">Entrepreneurship</span>
+        <span class="chip">Technology Startups</span>
+        <span class="chip">Engineering</span>
+        <span class="chip">Problem Solving</span>
+        <span class="chip">Emerging Technologies</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LINKS / CONTACT ================= -->
+  <section class="block" id="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal">Links &amp; Contact</p>
+      <div class="link-grid reveal-stag">
+        <div class="link-item">
+          <span class="label">GitHub</span>
+          <a class="value selectable" href="https://github.com/SabyaCodeForge" target="_blank" rel="noopener">SabyaCodeForge</a>
+          <span class="sub selectable">github.com/SabyaCodeForge</span>
+        </div>
+        <div class="link-item">
+          <span class="label">X (Twitter)</span>
+          <a class="value selectable" href="https://x.com/Sabyasachi49701" target="_blank" rel="noopener">@Sabyasachi49701</a>
+          <span class="sub selectable">x.com/Sabyasachi49701</span>
+        </div>
+        <div class="link-item">
+          <span class="label">Email</span>
+          <a class="value selectable" href="mailto:s.mondal.leaddev@gmail.com">s.mondal.leaddev@gmail.com</a>
+        </div>
+        <div class="link-item">
+          <span class="label">Phone</span>
+          <span class="value selectable">+91 93826 05574</span>
+          <span class="sub">West Bengal, India</span>
+        </div>
+      </div>
+      <div class="lang-line reveal"><span class="label">Languages</span><span>English · Bengali · Hindi</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap reveal">
+    <p>My goal is to continue learning, experimenting, and creating products that solve meaningful problems — eventually becoming an engineer and entrepreneur capable of turning ideas into technology that people can actually use.</p>
+    <p class="copy">© 2026 Sabyasachi Mondal · <b>Sabyx Labs</b></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- Letter-reveal hero name (progressive enhancement) ---------- */
+  try{
+    document.querySelectorAll('#heroName .line').forEach(function(line, li){
+      var text = line.textContent;
+      line.textContent = '';
+      text.split('').forEach(function(ch, i){
+        var span = document.createElement('span');
+        span.className = 'letter';
+        span.textContent = ch === ' ' ? '\u00A0' : ch;
+        span.style.animationDelay = (li * 0.35 + i * 0.035) + 's';
+        line.appendChild(span);
+      });
+    });
+  }catch(e){}
+
+  /* ---------- Scroll progress bar ---------- */
+  var progress = document.getElementById('progress');
+  function updateProgress(){
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    var pct = max > 0 ? (h.scrollTop / max) * 100 : 0;
+    if(progress) progress.style.width = pct + '%';
+  }
+  document.addEventListener('scroll', updateProgress, { passive:true });
+  updateProgress();
+
+  /* ---------- Reveal-on-scroll ---------- */
+  var revealEls = document.querySelectorAll('.reveal, .reveal-stag');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('in-view');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold:0.12, rootMargin:'0px 0px -8% 0px' });
+    revealEls.forEach(function(el){ io.observe(el); });
+  } else {
+    revealEls.forEach(function(el){ el.classList.add('in-view'); });
+  }
+
+  /* ---------- Section dot navigation ---------- */
+  var dots = document.querySelectorAll('.dotnav a');
+  var sections = Array.prototype.map.call(dots, function(d){
+    return document.getElementById(d.getAttribute('href').slice(1));
+  });
+  function updateDots(){
+    var y = window.scrollY + window.innerHeight * 0.4;
+    var activeIdx = 0;
+    sections.forEach(function(sec, i){
+      if(sec && sec.offsetTop <= y) activeIdx = i;
+    });
+    dots.forEach(function(d, i){ d.classList.toggle('active', i === activeIdx); });
+  }
+  document.addEventListener('scroll', updateDots, { passive:true });
+  updateDots();
+
+  /* ---------- Cursor glow (desktop, pointer-fine only) ---------- */
+  var glow = document.getElementById('glow');
+  if(window.matchMedia('(pointer:fine)').matches && glow){
+    var glowX = null, glowY = null, glowRaf = null;
+    function applyGlow(){
+      glowRaf = null;
+      glow.style.setProperty('--gx', glowX + 'px');
+      glow.style.setProperty('--gy', glowY + 'px');
+    }
+    document.addEventListener('mousemove', function(e){
+      glowX = e.clientX; glowY = e.clientY;
+      glow.classList.add('active');
+      // batch updates to one per animation frame instead of once per mousemove event
+      if(!glowRaf) glowRaf = requestAnimationFrame(applyGlow);
+    }, { passive:true });
+    document.addEventListener('mouseleave', function(){ glow.classList.remove('active'); });
+  }
+
+  /* ---------- Interactive demo: simulated sensor monitor ---------- */
+  try{
+    var chartEl = document.getElementById('demoChart');
+    var lineEl = document.getElementById('demoLine');
+    var toggleBtn = document.getElementById('demoToggle');
+    var triggerBtn = document.getElementById('demoTrigger');
+    var statusEl = document.getElementById('demoStatus');
+    var demoSection = document.getElementById('demo');
+
+    if(chartEl && lineEl && toggleBtn && triggerBtn && statusEl && demoSection){
+      var WIDTH = 600, HEIGHT = 140, POINTS = 80, STEP = WIDTH / (POINTS - 1);
+      var baseline = HEIGHT / 2;
+      var values = new Array(POINTS).fill(baseline);
+      var running = true;      // user-controlled pause/resume
+      var inView = true;       // paused automatically when scrolled off-screen
+      var spikeFrames = 0;     // countdown for a "detection" spike
+      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var timer = null;
+
+      function render(){
+        var pts = [];
+        for(var i = 0; i < values.length; i++){
+          pts.push((i * STEP).toFixed(1) + ',' + values[i].toFixed(1));
+        }
+        lineEl.setAttribute('points', pts.join(' '));
+      }
+
+      function step(){
+        values.shift();
+        var noise = (Math.random() - 0.5) * 14;
+        var next = baseline + noise;
+        if(spikeFrames > 0){
+          next = baseline - 45 - Math.random() * 15;
+          spikeFrames--;
+          if(spikeFrames === 0){ setStatus(false); }
+        }
+        next = Math.max(8, Math.min(HEIGHT - 8, next));
+        values.push(next);
+        render();
+      }
+
+      function setStatus(active){
+        statusEl.classList.toggle('is-active', active);
+        statusEl.innerHTML = '<span class="demo-status-dot"></span>' + (active ? 'Detecting…' : 'Idle');
+      }
+
+      function start(){
+        if(timer) return;
+        timer = setInterval(step, reducedMotion ? 400 : 140);
+      }
+      function stop(){
+        if(!timer) return;
+        clearInterval(timer);
+        timer = null;
+      }
+      function sync(){ (running && inView) ? start() : stop(); }
+
+      // seed the initial waveform so it doesn't start as a flat line
+      for(var s = 0; s < POINTS; s++){ step(); }
+
+      toggleBtn.addEventListener('click', function(){
+        running = !running;
+        toggleBtn.textContent = running ? 'Pause' : 'Resume';
+        sync();
+      });
+
+      triggerBtn.addEventListener('click', function(){
+        spikeFrames = 6;
+        setStatus(true);
+        if(!running){ running = true; toggleBtn.textContent = 'Pause'; sync(); }
+      });
+
+      if('IntersectionObserver' in window){
+        var demoIo = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){ inView = entry.isIntersecting; sync(); });
+        }, { threshold:0.15 });
+        demoIo.observe(demoSection);
+      }
+
+      sync();
+    }
+  }catch(e){}
+
+  /* ---------- 3D tilt on project cards ---------- */
+  try{
+    var tiltCards = document.querySelectorAll('.proj-card');
+    var canTilt = window.matchMedia('(pointer:fine)').matches &&
+                  !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if(canTilt && tiltCards.length){
+      tiltCards.forEach(function(card){
+        var rafId = null;
+        var maxTilt = 9;      // degrees
+        var lift = 10;        // px lift while tilting
+
+        function onMove(e){
+          var rect = card.getBoundingClientRect();
+          var px = (e.clientX - rect.left) / rect.width;
+          var py = (e.clientY - rect.top) / rect.height;
+          var rotX = ((0.5 - py) * maxTilt * 2).toFixed(2);
+          var rotY = ((px - 0.5) * maxTilt * 2).toFixed(2);
+
+          if(rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(function(){
+            card.style.transform =
+              'perspective(900px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) ' +
+              'translateY(-' + lift + 'px) scale(1.015)';
+            card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+            card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+          });
+        }
+
+        function onEnter(){ card.classList.add('tilting'); }
+
+        function onLeave(){
+          card.classList.remove('tilting');
+          if(rafId) cancelAnimationFrame(rafId);
+          card.style.transform = '';
+        }
+
+        card.addEventListener('pointerenter', onEnter);
+        card.addEventListener('pointermove', onMove);
+        card.addEventListener('pointerleave', onLeave);
+      });
+    }
+  }catch(e){}
+
+})();
+</script>
+
+</body>
+</html>

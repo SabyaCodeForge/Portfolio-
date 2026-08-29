@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Deployed via GitHub Pages at:
+  https://SabyaCodeForge.github.io/Portfolio-/
+
+  Upload this file as sitemap.xml at the root of the repo (same folder as
+  index.html) — it will then be reachable at
+  https://SabyaCodeForge.github.io/Portfolio-/sitemap.xml
+
+  This is a one-page site, so there's a single <url> entry. In-page sections
+  (#projects, #contact, etc.) aren't separately indexable, so they aren't
+  listed as their own entries — search engines only need the homepage URL.
+
+  Update <lastmod> whenever you make a meaningful content change to the page.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://SabyaCodeForge.github.io/Portfolio-/</loc>
+    <lastmod>2026-08-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
