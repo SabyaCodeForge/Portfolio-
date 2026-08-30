@@ -372,6 +372,12 @@
     box-shadow:0 6px 22px rgba(var(--shadow-tint),0.22);
     opacity:0;
   }
+  .seal img{
+    width:72%;
+    height:72%;
+    object-fit:contain;
+    display:block;
+  }
   @keyframes shimmer{ 0%{ background-position:0% 0; } 100%{ background-position:-260% 0; } }
   @keyframes seal-float{ 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-4px); } }
   @keyframes seal-intro{ from{ opacity:0; transform:translateY(10px) scale(.9); } to{ opacity:1; transform:translateY(0) scale(1); } }
@@ -482,6 +488,36 @@
     color:var(--ink);
     font-size:17px;
     max-width:600px;
+  }
+  .statement + .lede{ margin-top:22px; }
+
+  /* ---------- About section (photo + bio) ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:240px 1fr;
+    gap:48px;
+    align-items:start;
+  }
+  .about-photo{
+    position:relative;
+    border-radius:14px;
+    overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 20px 40px -24px rgba(var(--shadow-tint),0.35);
+    aspect-ratio:3/4;
+  }
+  .about-photo img{
+    width:100%; height:100%;
+    object-fit:cover;
+    display:block;
+    filter:grayscale(15%) contrast(1.02);
+    transition:filter .5s ease, transform .6s ease;
+  }
+  .about-photo:hover img{ filter:grayscale(0%) contrast(1.04); transform:scale(1.035); }
+  .about-text{ min-width:0; }
+  @media (max-width:780px){
+    .about-grid{ grid-template-columns:1fr; gap:26px; }
+    .about-photo{ max-width:220px; }
   }
 
   /* ---------- Reveal on scroll ---------- */
@@ -1032,7 +1068,7 @@
 <div id="progress" aria-hidden="true"></div>
 
 <nav class="dotnav" id="dotnav" aria-label="Section navigation">
-  <a href="#profile" data-label="Profile"></a>
+  <a href="#profile" data-label="About"></a>
   <a href="#experience" data-label="Experience"></a>
   <a href="#projects" data-label="Projects"></a>
   <a href="#skills" data-label="Skills"></a>
@@ -1079,8 +1115,8 @@
     </g>
   </svg>
   <div class="hero-inner">
-    <div class="seal" aria-hidden="true">SM</div>
-    <p class="kicker">Portfolio Résumé · <b>West Bengal, India</b></p>
+    <div class="seal" aria-hidden="true"><img src="sabyx-icon.png" alt=""></div>
+    <p class="kicker">Portfolio · <b>West Bengal, India</b></p>
     <h1 class="name" id="heroName">
       <span class="line">SABYASACHI</span>
       <span class="line">MONDAL</span>
@@ -1100,14 +1136,22 @@
 
 <main>
 
-  <!-- ================= PROFILE ================= -->
+  <!-- ================= ABOUT ================= -->
   <section class="block" id="profile">
     <div class="wrap reveal">
-      <p class="eyebrow">Profile</p>
-      <p class="lede">Class 10 ICSE student, programmer, and founder of Sabyx Labs, with a strong interest in software development, web technologies, robotics, electronics, and entrepreneurship.</p>
-      <p class="lede">Focused on transforming ideas into practical digital products — ranging from responsive web applications and Progressive Web Apps to Arduino-based electronics and early-stage product concepts.</p>
-      <p class="lede">Particularly interested in software engineering, product development, artificial intelligence, robotics, and building technology that is simple and useful for everyday people.</p>
-      <p class="statement">"I believe the best way to understand technology is to build with it."</p>
+      <p class="eyebrow">About</p>
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="profile-photo.jpg" alt="Sabyasachi Mondal">
+        </div>
+        <div class="about-text">
+          <p class="lede">Hi, I'm Sabyasachi Mondal, a student, developer, and technology enthusiast from Mallarpur, Birbhum, West Bengal, India. I was born on 22 December 2009.</p>
+          <p class="lede">I'm passionate about programming, web development, robotics, electronics, and emerging technologies. I enjoy turning ideas into real projects, experimenting with new technologies, and learning through hands-on experience.</p>
+          <p class="lede">I'm also the founder of Sabyx Labs, where I'm exploring how technology can be used to create useful and innovative products for everyday people.</p>
+          <p class="statement">"For me, technology is not just about writing code — it's about identifying problems, thinking creatively, and building meaningful solutions."</p>
+          <p class="lede">Beyond technology, I love cricket, travelling, mountains, and peaceful places. I believe in staying curious, learning continuously, and building something better every day.</p>
+        </div>
+      </div>
     </div>
   </section>
 
