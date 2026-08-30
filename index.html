@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Sabyasachi Mondal — Student Founder &amp; Programmer</title>
-<meta name="description" content="Portfolio of Sabyasachi Mondal — Class 10 ICSE student, programmer, and founder of Sabyx Labs.">
+<meta name="description" content="Portfolio of Sabyasachi Mondal, a student developer and technology enthusiast from West Bengal, India — building web apps, robotics projects, and Sabyx Labs, his own technology venture.">
 <meta name="theme-color" content="#f6f5f2">
 <link rel="canonical" href="https://SabyaCodeForge.github.io/Portfolio-/">
 
@@ -29,7 +29,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sabyasachi Mondal">
 <meta property="og:title" content="Sabyasachi Mondal — Student Founder & Programmer">
-<meta property="og:description" content="Portfolio of Sabyasachi Mondal — Class 10 ICSE student, programmer, and founder of Sabyx Labs.">
+<meta property="og:description" content="Portfolio of Sabyasachi Mondal, a student developer and technology enthusiast from West Bengal, India — building web apps, robotics projects, and Sabyx Labs, his own technology venture.">
 <meta property="og:url" content="https://SabyaCodeForge.github.io/Portfolio-/">
 <meta property="og:image" content="https://SabyaCodeForge.github.io/Portfolio-/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -39,7 +39,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sabyasachi Mondal — Student Founder & Programmer">
-<meta name="twitter:description" content="Portfolio of Sabyasachi Mondal — Class 10 ICSE student, programmer, and founder of Sabyx Labs.">
+<meta name="twitter:description" content="Portfolio of Sabyasachi Mondal, a student developer and technology enthusiast from West Bengal, India — building web apps, robotics projects, and Sabyx Labs, his own technology venture.">
 <meta name="twitter:image" content="https://SabyaCodeForge.github.io/Portfolio-/og-image.png">
 <meta name="twitter:site" content="@Sabyasachi49701">
 
@@ -57,7 +57,7 @@
   "name": "Sabyasachi Mondal",
   "url": "https://SabyaCodeForge.github.io/Portfolio-/",
   "jobTitle": "Student Founder & Programmer",
-  "description": "Class 10 ICSE student, programmer, and founder of Sabyx Labs.",
+  "description": "Student developer and technology enthusiast from West Bengal, India, building web apps, robotics projects, and Sabyx Labs.",
   "email": "mailto:s.mondal.leaddev@gmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -885,6 +885,66 @@
     margin-top:14px;
   }
 
+  /* ---------- Mini code playground ---------- */
+  .playground{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+  }
+  .playground-label, .playground-output-label{
+    display:block;
+    font-family:var(--mono);
+    font-size:10.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-faint);
+    margin-bottom:6px;
+  }
+  .playground-input{
+    width:100%;
+    min-height:160px;
+    resize:vertical;
+    font-family:var(--mono);
+    font-size:13px;
+    line-height:1.65;
+    color:var(--ink);
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 16px;
+    tab-size:2;
+    transition:border-color .2s ease;
+  }
+  .playground-input:focus{ outline:none; border-color:var(--gold-line); }
+  .playground-output-wrap{ display:flex; flex-direction:column; height:100%; }
+  .playground-output{
+    flex:1;
+    margin:0;
+    min-height:160px;
+    font-family:var(--mono);
+    font-size:13px;
+    line-height:1.65;
+    color:var(--ink);
+    background:var(--panel-2);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:14px 16px;
+    white-space:pre-wrap;
+    word-break:break-word;
+    overflow:auto;
+  }
+  .pg-line{ display:block; }
+  .pg-line::before{ content:"› "; color:var(--gold-bright); }
+  .pg-error{ color:#8a3b2a; }
+  .pg-error::before{ content:"⚠ "; color:#8a3b2a; }
+  .pg-empty{ opacity:.5; }
+  .pg-empty::before{ content:""; }
+  .demo-status.is-error{ color:#8a3b2a; }
+  .demo-status.is-error .demo-status-dot{ background:#8a3b2a; animation:none; }
+  @media (max-width:720px){
+    .playground{ grid-template-columns:1fr; }
+  }
+
   /* ---------- Entrepreneurship ---------- */
   .flow{
     display:flex;
@@ -1314,26 +1374,31 @@
   </section>
 
   <!-- ================= INTERACTIVE DEMO ================= -->
+  <!-- ================= INTERACTIVE DEMO — PATHFINDING VISUALIZER ================= -->
   <section class="block" id="demo">
     <div class="wrap">
       <p class="eyebrow reveal">Interactive Demo</p>
-      <p class="lede reveal">A small simulated sensor readout, in the spirit of the Arduino motion &amp; infrared detection work below — press the button to fire a simulated detection event.</p>
+      <p class="lede reveal">A tiny Python playground, running real Python in your browser via WebAssembly — edit the code on the left and see it run on the right. Nothing is sent to any server.</p>
       <div class="demo-panel reveal">
         <div class="demo-head">
-          <span class="demo-name">Sabyx Sensor Monitor <span class="demo-name-sub">— simulated</span></span>
-          <span class="demo-status" id="demoStatus"><span class="demo-status-dot"></span>Idle</span>
+          <span class="demo-name">Mini Code Playground <span class="demo-name-sub">— live Python</span></span>
+          <span class="demo-status" id="demoStatus" aria-live="polite"><span class="demo-status-dot"></span>Idle</span>
         </div>
-        <svg class="demo-chart" id="demoChart" viewBox="0 0 600 140" preserveAspectRatio="none" aria-hidden="true">
-          <line x1="0" y1="35" x2="600" y2="35" class="demo-grid"></line>
-          <line x1="0" y1="70" x2="600" y2="70" class="demo-grid"></line>
-          <line x1="0" y1="105" x2="600" y2="105" class="demo-grid"></line>
-          <polyline id="demoLine" class="demo-line" points=""></polyline>
-        </svg>
+        <div class="playground">
+          <div>
+            <label class="playground-label" for="playgroundInput">Edit the code</label>
+            <textarea id="playgroundInput" class="playground-input" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" rows="7"></textarea>
+          </div>
+          <div class="playground-output-wrap">
+            <span class="playground-output-label">Output</span>
+            <pre class="playground-output" id="playgroundOutput" aria-live="polite"></pre>
+          </div>
+        </div>
         <div class="demo-controls">
-          <button class="demo-btn" id="demoToggle" type="button">Pause</button>
-          <button class="demo-btn demo-btn--accent" id="demoTrigger" type="button">Trigger Detection</button>
+          <button class="demo-btn demo-btn--accent" id="playgroundRun" type="button">Run Code</button>
+          <button class="demo-btn" id="playgroundReset" type="button">Reset</button>
         </div>
-        <p class="demo-note">Log output is generated in your browser for illustration only — no real sensor is connected.</p>
+        <p class="demo-note">Try changing the name, editing the message, or adding your own <code>print()</code> lines — it updates as you type. First run takes a few seconds while the Python runtime loads.</p>
       </div>
     </div>
   </section>
@@ -1542,86 +1607,146 @@
     document.addEventListener('mouseleave', function(){ glow.classList.remove('active'); });
   }
 
-  /* ---------- Interactive demo: simulated sensor monitor ---------- */
+  /* ---------- Interactive demo: mini Python playground (via Pyodide/WASM) ---------- */
   try{
-    var chartEl = document.getElementById('demoChart');
-    var lineEl = document.getElementById('demoLine');
-    var toggleBtn = document.getElementById('demoToggle');
-    var triggerBtn = document.getElementById('demoTrigger');
-    var statusEl = document.getElementById('demoStatus');
-    var demoSection = document.getElementById('demo');
+    var pgInput = document.getElementById('playgroundInput');
+    var pgOutput = document.getElementById('playgroundOutput');
+    var pgRunBtn = document.getElementById('playgroundRun');
+    var pgResetBtn = document.getElementById('playgroundReset');
+    var pgStatus = document.getElementById('demoStatus');
+    var pgSection = document.getElementById('demo');
 
-    if(chartEl && lineEl && toggleBtn && triggerBtn && statusEl && demoSection){
-      var WIDTH = 600, HEIGHT = 140, POINTS = 80, STEP = WIDTH / (POINTS - 1);
-      var baseline = HEIGHT / 2;
-      var values = new Array(POINTS).fill(baseline);
-      var running = true;      // user-controlled pause/resume
-      var inView = true;       // paused automatically when scrolled off-screen
-      var spikeFrames = 0;     // countdown for a "detection" spike
-      var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var timer = null;
+    var STARTER_CODE = 'name = "Sabyasachi"\nprint(f"Hello, {name} \ud83d\udc4b")';
+    var PYODIDE_BASE = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/';
 
-      function render(){
-        var pts = [];
-        for(var i = 0; i < values.length; i++){
-          pts.push((i * STEP).toFixed(1) + ',' + values[i].toFixed(1));
+    if(pgInput && pgOutput && pgRunBtn && pgResetBtn && pgStatus){
+      var pgTimer = null;
+      var pgRunId = 0;
+      var pyodideInstance = null;
+      var pyodideLoadPromise = null;
+      var pyLogs = [];
+
+      function pgSetStatus(text, mode){
+        // mode: 'active' | 'error' | null (idle)
+        pgStatus.classList.toggle('is-active', mode === 'active');
+        pgStatus.classList.toggle('is-error', mode === 'error');
+        pgStatus.innerHTML = '<span class="demo-status-dot"></span>' + text;
+      }
+
+      function escapeHtml(str){
+        return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      }
+
+      function loadPyodideScript(){
+        return new Promise(function(resolve, reject){
+          if(window.loadPyodide){ resolve(); return; }
+          var s = document.createElement('script');
+          s.src = PYODIDE_BASE + 'pyodide.js';
+          s.onload = function(){ resolve(); };
+          s.onerror = function(){ reject(new Error('Could not load the Python runtime script.')); };
+          document.head.appendChild(s);
+        });
+      }
+
+      function initPyodide(){
+        if(pyodideInstance) return Promise.resolve(pyodideInstance);
+        if(pyodideLoadPromise) return pyodideLoadPromise;
+        pgSetStatus('Loading Python runtime…', 'active');
+        pyodideLoadPromise = loadPyodideScript().then(function(){
+          return window.loadPyodide({ indexURL: PYODIDE_BASE });
+        }).then(function(py){
+          pyodideInstance = py;
+          pyodideInstance.setStdout({ batched: function(msg){ pyLogs.push(msg); } });
+          pyodideInstance.setStderr({ batched: function(msg){ pyLogs.push(msg); } });
+          return pyodideInstance;
+        }).catch(function(err){
+          pyodideLoadPromise = null;
+          pgSetStatus('Couldn\'t load Python runtime', 'error');
+          pgOutput.innerHTML = '<span class="pg-line pg-error">Couldn\'t load the Python runtime — check your internet connection and try again.</span>';
+          throw err;
+        });
+        return pyodideLoadPromise;
+      }
+
+      function renderLogs(){
+        if(pyLogs.length === 0){
+          pgOutput.innerHTML = '<span class="pg-line pg-empty">(no print() output yet — try adding one)</span>';
+        } else {
+          pgOutput.innerHTML = pyLogs.map(function(line){
+            return '<span class="pg-line">' + escapeHtml(line) + '</span>';
+          }).join('');
         }
-        lineEl.setAttribute('points', pts.join(' '));
       }
 
-      function step(){
-        values.shift();
-        var noise = (Math.random() - 0.5) * 14;
-        var next = baseline + noise;
-        if(spikeFrames > 0){
-          next = baseline - 45 - Math.random() * 15;
-          spikeFrames--;
-          if(spikeFrames === 0){ setStatus(false); }
+      function lastErrorLine(message){
+        var parts = String(message).trim().split('\n');
+        return parts[parts.length - 1] || String(message);
+      }
+
+      function runCode(){
+        var code = pgInput.value;
+        var myRunId = ++pgRunId;
+        initPyodide().then(function(py){
+          if(myRunId !== pgRunId) return; // a newer run started while this one was loading
+          pyLogs = [];
+          try{
+            py.runPython(code);
+            if(myRunId !== pgRunId) return;
+            renderLogs();
+            pgSetStatus('Ran successfully', 'active');
+          }catch(err){
+            if(myRunId !== pgRunId) return;
+            pgOutput.innerHTML = '<span class="pg-line pg-error">' + escapeHtml(lastErrorLine(err.message)) + '</span>';
+            pgSetStatus('Error', 'error');
+          }
+        }).catch(function(){ /* status already set inside initPyodide */ });
+      }
+
+      // Tab key inserts spaces instead of jumping focus, like a real editor
+      pgInput.addEventListener('keydown', function(e){
+        if(e.key === 'Tab'){
+          e.preventDefault();
+          var start = this.selectionStart, end = this.selectionEnd;
+          this.value = this.value.substring(0, start) + '  ' + this.value.substring(end);
+          this.selectionStart = this.selectionEnd = start + 2;
         }
-        next = Math.max(8, Math.min(HEIGHT - 8, next));
-        values.push(next);
-        render();
-      }
-
-      function setStatus(active){
-        statusEl.classList.toggle('is-active', active);
-        statusEl.innerHTML = '<span class="demo-status-dot"></span>' + (active ? 'Detecting…' : 'Idle');
-      }
-
-      function start(){
-        if(timer) return;
-        timer = setInterval(step, reducedMotion ? 400 : 140);
-      }
-      function stop(){
-        if(!timer) return;
-        clearInterval(timer);
-        timer = null;
-      }
-      function sync(){ (running && inView) ? start() : stop(); }
-
-      // seed the initial waveform so it doesn't start as a flat line
-      for(var s = 0; s < POINTS; s++){ step(); }
-
-      toggleBtn.addEventListener('click', function(){
-        running = !running;
-        toggleBtn.textContent = running ? 'Pause' : 'Resume';
-        sync();
       });
 
-      triggerBtn.addEventListener('click', function(){
-        spikeFrames = 6;
-        setStatus(true);
-        if(!running){ running = true; toggleBtn.textContent = 'Pause'; sync(); }
+      pgInput.addEventListener('input', function(){
+        if(pgTimer) clearTimeout(pgTimer);
+        pgTimer = setTimeout(runCode, 500);
       });
 
-      if('IntersectionObserver' in window){
-        var demoIo = new IntersectionObserver(function(entries){
-          entries.forEach(function(entry){ inView = entry.isIntersecting; sync(); });
-        }, { threshold:0.15 });
-        demoIo.observe(demoSection);
-      }
+      pgRunBtn.addEventListener('click', function(){
+        if(pgTimer) clearTimeout(pgTimer);
+        runCode();
+      });
 
-      sync();
+      pgResetBtn.addEventListener('click', function(){
+        pgInput.value = STARTER_CODE;
+        runCode();
+        pgInput.focus();
+      });
+
+      pgInput.value = STARTER_CODE;
+
+      // Start downloading the Python runtime as soon as the demo scrolls into
+      // view (rather than on page load), so most visitors never pay for it,
+      // but it's usually ready by the time someone actually reaches this
+      // section and starts reading.
+      if(pgSection && 'IntersectionObserver' in window){
+        var pgIo = new IntersectionObserver(function(entries){
+          entries.forEach(function(entry){
+            if(entry.isIntersecting){
+              runCode();
+              pgIo.disconnect();
+            }
+          });
+        }, { threshold:0.2 });
+        pgIo.observe(pgSection);
+      } else {
+        runCode();
+      }
     }
   }catch(e){}
 
