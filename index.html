@@ -262,6 +262,43 @@
   .print-btn:active{ transform:translateY(0); }
   .print-btn svg{ width:13px; height:13px; }
 
+  /* ---------- Back to top button ---------- */
+  .back-to-top{
+    position:fixed;
+    right:24px;
+    bottom:24px;
+    z-index:150;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    border:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg, var(--gold), var(--gold-bright) 55%, var(--ink));
+    color:#f6f5f2;
+    cursor:pointer;
+    box-shadow:0 8px 24px rgba(var(--shadow-tint),0.18), 0 0 0 1px rgba(255,255,255,0.06) inset;
+    opacity:0;
+    transform:translateY(12px) scale(.9);
+    pointer-events:none;
+    transition:opacity .3s ease, transform .3s var(--ease), box-shadow .2s ease;
+  }
+  .back-to-top.visible{
+    opacity:1;
+    transform:translateY(0) scale(1);
+    pointer-events:auto;
+  }
+  .back-to-top:hover{
+    box-shadow:0 12px 30px rgba(var(--shadow-tint),0.3), 0 0 0 1px rgba(255,255,255,0.08) inset;
+    transform:translateY(-3px) scale(1.05);
+  }
+  .back-to-top:active{ transform:translateY(0) scale(.95); }
+  .back-to-top svg{ width:19px; height:19px; }
+  @media (max-width:560px){
+    .back-to-top{ right:16px; bottom:16px; width:42px; height:42px; }
+  }
+
   /* ---------- Section dot nav ---------- */
   .dotnav{
     position:fixed;
@@ -1082,7 +1119,7 @@
   /* ---------- Print ---------- */
   @media print{
     @page{ size:A4; margin:14mm 16mm; }
-    .print-btn, .dotnav, #progress, .grain, .glow, #demo, .circuit{ display:none !important; }
+    .print-btn, .dotnav, #progress, .grain, .glow, #demo, .circuit, .back-to-top{ display:none !important; }
     *{ -webkit-user-select:text !important; user-select:text !important; }
     body{ background:#fff; color:#000; overflow:visible; }
     .hero{ -webkit-mask-image:none; mask-image:none; padding:0 0 28px; background:none; }
@@ -1126,6 +1163,13 @@
 <button class="print-btn" onclick="window.print()" aria-label="Print or save as PDF">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
   <span>Save as PDF</span>
+</button>
+
+<button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5"></path>
+    <path d="M6 11l6-6 6 6"></path>
+  </svg>
 </button>
 
 <!-- ================= HERO ================= -->
@@ -1731,6 +1775,31 @@
       } else {
         runCode();
       }
+    }
+  }catch(e){}
+
+  /* ---------- Back to top button ---------- */
+  try{
+    var backToTopBtn = document.getElementById('backToTop');
+    if(backToTopBtn){
+      var reducedMotionScroll = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var btRaf = null;
+
+      function toggleBackToTop(){
+        btRaf = null;
+        if(window.scrollY > 480){ backToTopBtn.classList.add('visible'); }
+        else{ backToTopBtn.classList.remove('visible'); }
+      }
+
+      window.addEventListener('scroll', function(){
+        if(!btRaf) btRaf = requestAnimationFrame(toggleBackToTop);
+      }, { passive:true });
+
+      toggleBackToTop();
+
+      backToTopBtn.addEventListener('click', function(){
+        window.scrollTo({ top: 0, behavior: reducedMotionScroll ? 'auto' : 'smooth' });
+      });
     }
   }catch(e){}
 
