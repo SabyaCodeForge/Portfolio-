@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+  // Runs immediately, before any CSS paints, so the correct theme applies
+  // from the very first frame instead of flashing light-then-dark (or vice versa).
+  (function(){
+    try{
+      var stored = localStorage.getItem('theme');
+      var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    }catch(e){}
+  })();
+</script>
+<script>
+  // Best-effort deterrent against casual right-click / DevTools shortcuts.
+  // Note: this cannot fully block DevTools (browsers also open it from the
+  // menu bar, not just shortcuts) and cannot intercept view-source: at the
+  // protocol level — it just removes the obvious, easy paths.
+  (function(){
+    try{
+      document.addEventListener('contextmenu', function(e){ e.preventDefault(); });
+
+      document.addEventListener('keydown', function(e){
+        var key = (e.key || '').toLowerCase();
+        var blocked =
+          key === 'f12' ||
+          ((e.ctrlKey || e.metaKey) && e.shiftKey && (key === 'i' || key === 'j' || key === 'c' || key === 'k')) ||
+          ((e.ctrlKey || e.metaKey) && (key === 'u' || key === 's'));
+        if(blocked){
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }, true);
+    }catch(e){}
+  })();
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Sabyasachi Mondal — Student Founder &amp; Programmer</title>
@@ -125,6 +159,41 @@
     --maxw:880px;
     --dot: radial-gradient(circle, rgba(20,19,17,0.10) 1px, transparent 1.3px);
     --ease: cubic-bezier(.16,.8,.24,1);
+    --btn-text:#f6f5f2;
+  }
+
+  /* ---------- Dark theme ---------- */
+  :root[data-theme="dark"]{
+    --bg:#15140f;
+    --bg-2:#1c1a15;
+    --panel:#201e18;
+    --panel-2:#1a1813;
+    --ink:#f3f1ea;
+    --ink-soft:#c7c0ac;
+    --ink-faint:#948d78;
+    --line: rgba(243,241,234,0.10);
+    --line-strong: rgba(243,241,234,0.18);
+    --gold-dim:#a89b78;
+    --gold:#c9a227;
+    --gold-bright:#e8c766;
+    --gold-soft: rgba(232,199,102,0.10);
+    --gold-soft-2: rgba(232,199,102,0.16);
+    --gold-line: rgba(232,199,102,0.35);
+    --shadow-tint: 0,0,0;
+    --dot: radial-gradient(circle, rgba(243,241,234,0.14) 1px, transparent 1.3px);
+    --btn-text:#141311;
+  }
+  :root[data-theme="dark"] .demo-status.is-error .demo-status-dot{ background:#e0876f; }
+  :root[data-theme="dark"] .pg-error,
+  :root[data-theme="dark"] .pg-error::before{ color:#e0876f; }
+  :root[data-theme="dark"] .demo-status.is-error{ color:#e0876f; }
+  :root[data-theme="dark"] .about-photo img{ filter:grayscale(10%) contrast(1.02) brightness(.97); }
+
+  /* Smooth, contained transition when switching themes — limited to color
+     properties so it doesn't interfere with hover/tilt transforms elsewhere. */
+  body, .demo-panel, .proj-card, .labs-card, .edu-card, .about-photo,
+  .playground-input, .playground-output, header.hero, section.block{
+    transition: background-color .35s ease, border-color .35s ease, color .35s ease;
   }
 
   *{ box-sizing:border-box; }
@@ -231,17 +300,24 @@
   }
 
   /* ---------- Print button ---------- */
-  .print-btn{
+  /* ---------- Top-right action buttons (download + theme toggle) ---------- */
+  .top-actions{
     position:fixed;
     top:22px;
     right:28px;
     z-index:150;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .download-btn{
     display:inline-flex;
     align-items:center;
     gap:8px;
     background:linear-gradient(135deg, var(--gold), var(--gold-bright) 55%, var(--ink));
-    color:#f6f5f2;
+    color:var(--btn-text);
     border:none;
+    text-decoration:none;
     font-family:var(--mono);
     font-weight:600;
     font-size:11px;
@@ -251,16 +327,16 @@
     border-radius:100px;
     cursor:pointer;
     box-shadow:0 8px 24px rgba(var(--shadow-tint),0.18), 0 0 0 1px rgba(255,255,255,0.06) inset;
-    transition:transform .2s var(--ease), box-shadow .2s var(--ease);
+    transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .35s ease, color .35s ease;
     animation:btn-breathe 4.5s ease-in-out infinite;
   }
   @keyframes btn-breathe{
     0%,100%{ box-shadow:0 8px 24px rgba(var(--shadow-tint),0.18), 0 0 0 1px rgba(255,255,255,0.06) inset; }
     50%{ box-shadow:0 10px 30px rgba(var(--shadow-tint),0.28), 0 0 0 1px rgba(255,255,255,0.08) inset; }
   }
-  .print-btn:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 14px 34px rgba(var(--shadow-tint),0.3); animation-play-state:paused; }
-  .print-btn:active{ transform:translateY(0); }
-  .print-btn svg{ width:13px; height:13px; }
+  .download-btn:hover{ transform:translateY(-2px) scale(1.02); box-shadow:0 14px 34px rgba(var(--shadow-tint),0.3); animation-play-state:paused; }
+  .download-btn:active{ transform:translateY(0); }
+  .download-btn svg{ width:13px; height:13px; }
 
   /* ---------- Back to top button ---------- */
   .back-to-top{
@@ -276,13 +352,13 @@
     align-items:center;
     justify-content:center;
     background:linear-gradient(135deg, var(--gold), var(--gold-bright) 55%, var(--ink));
-    color:#f6f5f2;
+    color:var(--btn-text);
     cursor:pointer;
     box-shadow:0 8px 24px rgba(var(--shadow-tint),0.18), 0 0 0 1px rgba(255,255,255,0.06) inset;
     opacity:0;
     transform:translateY(12px) scale(.9);
     pointer-events:none;
-    transition:opacity .3s ease, transform .3s var(--ease), box-shadow .2s ease;
+    transition:opacity .3s ease, transform .3s var(--ease), box-shadow .2s ease, background .35s ease, color .35s ease;
   }
   .back-to-top.visible{
     opacity:1;
@@ -298,6 +374,33 @@
   @media (max-width:560px){
     .back-to-top{ right:16px; bottom:16px; width:42px; height:42px; }
   }
+
+  /* ---------- Theme toggle ---------- */
+  .theme-toggle{
+    flex-shrink:0;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid var(--line-strong);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--panel);
+    color:var(--ink);
+    cursor:pointer;
+    box-shadow:0 8px 24px rgba(var(--shadow-tint),0.14);
+    transition:transform .2s var(--ease), box-shadow .2s ease, background .35s ease, border-color .35s ease, color .35s ease;
+  }
+  .theme-toggle:hover{
+    transform:translateY(-3px) scale(1.05);
+    box-shadow:0 12px 30px rgba(var(--shadow-tint),0.22);
+    border-color:var(--gold-line);
+  }
+  .theme-toggle:active{ transform:translateY(0) scale(.95); }
+  .theme-toggle svg{ width:17px; height:17px; }
+  .theme-toggle .icon-sun{ display:none; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon{ display:none; }
+  :root[data-theme="dark"] .theme-toggle .icon-sun{ display:block; }
 
   /* ---------- Section dot nav ---------- */
   .dotnav{
@@ -401,7 +504,7 @@
     font-weight:600;
     font-size:16px;
     letter-spacing:0.02em;
-    color:#f6f5f2;
+    color:var(--btn-text);
     margin-bottom:26px;
     background:linear-gradient(120deg, var(--gold) 0%, var(--gold-bright) 45%, var(--ink) 60%, var(--gold) 100%);
     background-size:260% 100%;
@@ -579,23 +682,6 @@
   .reveal-stag.in-view > *:nth-child(6){ transition-delay:.33s; }
   .reveal-stag.in-view > *:nth-child(7){ transition-delay:.39s; }
   .reveal-stag.in-view > *:nth-child(8){ transition-delay:.45s; }
-
-  /* ---------- Two column label/content grid ---------- */
-  .row{
-    display:grid;
-    grid-template-columns:170px 1fr;
-    gap:28px;
-    padding:28px 0;
-  }
-  .row:not(:last-child){ border-bottom:1px solid var(--line); }
-  .row .label{
-    font-family:var(--mono);
-    font-size:11.5px;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--ink-faint);
-    padding-top:2px;
-  }
 
   /* ---------- Sabyx Labs feature card ---------- */
   .labs-card{
@@ -896,9 +982,9 @@
   .demo-btn--accent{
     background:var(--gold-bright);
     border-color:var(--gold-bright);
-    color:#f6f5f2;
+    color:var(--btn-text);
   }
-  .demo-btn--accent:hover{ color:#f6f5f2; opacity:.9; }
+  .demo-btn--accent:hover{ color:var(--btn-text); opacity:.9; }
   .demo-btn--accent:active{ transform:translateY(0) scale(.97); }
   .demo-note{
     font-size:12px;
@@ -1090,20 +1176,19 @@
      a min-width query below (see .proj-card--wide) since explicit spans force
      auto-fit to reserve that many tracks regardless of available width. */
   @media (max-width: 760px){
-    .row{ grid-template-columns:1fr; gap:8px; }
     .hero{ padding:100px 0 52px; }
     .edu-card{ flex-direction:column; }
     .edu-session{ text-align:left; }
     .labs-card{ padding:30px 24px; }
-    .print-btn{ top:16px; right:16px; }
+    .top-actions{ top:16px; right:16px; }
   }
   @media (max-width: 560px){
     .wrap{ padding:0 20px; }
     .hero-inner{ padding:0 20px; }
   }
   @media (max-width: 400px){
-    .print-btn span{ display:none; }
-    .print-btn{ padding:12px; }
+    .download-btn span{ display:none; }
+    .download-btn{ padding:12px; }
     section.block{ padding:46px 0; }
     .labs-card{ padding:24px 18px; }
     .proj-card{ padding:22px 18px; }
@@ -1119,7 +1204,7 @@
   /* ---------- Print ---------- */
   @media print{
     @page{ size:A4; margin:14mm 16mm; }
-    .print-btn, .dotnav, #progress, .grain, .glow, #demo, .circuit, .back-to-top{ display:none !important; }
+    .download-btn, .dotnav, #progress, .grain, .glow, #demo, .circuit, .back-to-top, .theme-toggle{ display:none !important; }
     *{ -webkit-user-select:text !important; user-select:text !important; }
     body{ background:#fff; color:#000; overflow:visible; }
     .hero{ -webkit-mask-image:none; mask-image:none; padding:0 0 28px; background:none; }
@@ -1138,7 +1223,7 @@
     footer{ padding:24px 0 0; }
     .reveal, .reveal-stag > *{ opacity:1 !important; transform:none !important; }
     .eyebrow, .badge, .status-pill, .kicker b, .role-line span, .labs-title, .proj-title, h4, h3, .edu-session{ color:#000 !important; -webkit-text-fill-color:#000 !important; }
-    .lede, .labs-desc, .proj-desc, .ink-soft{ color:#333 !important; }
+    .lede, .labs-desc, .proj-desc{ color:#333 !important; }
   }
 </style>
 </head>
@@ -1160,10 +1245,22 @@
   <a href="#contact" data-label="Contact"></a>
 </nav>
 
-<button class="print-btn" onclick="window.print()" aria-label="Print or save as PDF">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
-  <span>Save as PDF</span>
-</button>
+<div class="top-actions">
+  <a class="download-btn" href="Sabyasachi-Mondal-Resume.pdf" download="Sabyasachi-Mondal-Resume.pdf" aria-label="Download resume (PDF)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><path d="M7 10l5 5 5-5"></path><path d="M5 21h14"></path></svg>
+    <span>Download Résumé</span>
+  </a>
+
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4.2"></circle>
+      <path d="M12 2.5v2.4M12 19.1v2.4M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"></path>
+    </svg>
+  </button>
+</div>
 
 <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1775,6 +1872,30 @@
       } else {
         runCode();
       }
+    }
+  }catch(e){}
+
+  /* ---------- Theme toggle (dark mode) ---------- */
+  try{
+    var themeToggleBtn = document.getElementById('themeToggle');
+    var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    var THEME_COLORS = { light: '#f6f5f2', dark: '#15140f' };
+
+    function applyTheme(theme){
+      document.documentElement.setAttribute('data-theme', theme);
+      if(themeColorMeta) themeColorMeta.setAttribute('content', THEME_COLORS[theme] || THEME_COLORS.light);
+    }
+
+    if(themeToggleBtn){
+      // sync the button/meta with whatever the head script already applied
+      applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
+
+      themeToggleBtn.addEventListener('click', function(){
+        var current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+        var next = current === 'dark' ? 'light' : 'dark';
+        applyTheme(next);
+        try{ localStorage.setItem('theme', next); }catch(e){}
+      });
     }
   }catch(e){}
 
